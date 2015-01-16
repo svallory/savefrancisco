@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="Cb4dbnhtTwpAcS1i6Uj0bB33ccAUkV2gKAzSW31xvAk" />
     <title>Ajude a salvar Francisco, El Hombre</title>
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -100,9 +101,48 @@
       background-color: #fff;
       padding: 15px;
     }
+
+    .lang-pt .es, .lang-pt .en {
+      display: none;
+    }
+
+    .lang-es .pt, .lang-es .en {
+      display: none;
+    }
+
+    .lang-en .es, .lang-en .pt {
+      display: none;
+    }
+
+    .langs {
+      float: right;
+      margin: 25px 25px 0 0;
+    }
+
+    .langs .social-btn {
+      background-color: #f5f5f5;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+    }
+
+    .langs .social-btn:hover {
+      background: #3dc9b3;
+    }
+
+    .lang-pt .pt-btn,
+    .lang-es .es-btn,
+    .lang-en .en-btn {
+      background-color: #242830;
+    }
+
     </style>
   </head>
-  <body id="top">
+  <body id="top" class="lang-pt">
+    <script>
+      var lang = location.hash.match(/lang\-\w\w/)
+      if(lang) document.body.className = lang[0];
+    </script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -112,13 +152,26 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     <header id="home">
+      <div class="langs">
+        <ul class="social-buttons">
+          <li><a href="#lang-pt" class="social-btn lang-btn pt-btn"><img src="img/flags/brazil.png"></a></li>
+          <li><a href="#lang-es" class="social-btn lang-btn es-btn"><img src="img/flags/mexico.png"></a></li>
+          <li><a href="#lang-en" class="social-btn lang-btn en-btn"><img src="img/flags/us.png"></a></li>
+        </ul>
+      </div>
       <section class="hero" id="hero">
         <div class="container">
           <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center">
-              <p class="hi animated fadeInUp delay-05s">Oi! Nós somos</p>
+              <p class="hi animated fadeInUp delay-05s">
+                <span class="pt">Oi! Nós somos</span>
+                <span class="es">¡Hola! Somos</span>
+                <span class="en">Hi! We are</span>
+              </p>
               <h1 class="name animated fadeIn">Francisco, El Hombre</h1>
-              <p class="help animated fadeInDown delay-1s">E precisamos da sua ajuda</p>
+              <p class="help animated fadeInDown delay-1s">
+                E precisamos da sua ajuda
+              </p>
             </div>
           </div>
         </div>
@@ -213,14 +266,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1 class="arrow">Ou siga/curta/assista Francisco em outras redes</h1>
+              <h1 class="arrow">Ou siga / curta / assista Francisco em outras redes</h1>
               <br>
               <ul class="social-buttons">
-                <li><a href="http://www.facebook.com/franciscoelhombreband" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/F_elhombre" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="http://www.youtube.com/channel/UC5VtwBCJALppUQal3cObUag" class="social-btn"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="http://instagram.com/franciscoelhombreband" class="social-btn"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://plus.google.com/franciscoelhombreband" class="social-btn"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="http://www.facebook.com/franciscoelhombreband" class="social-btn" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/F_elhombre" class="social-btn" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.youtube.com/channel/UC5VtwBCJALppUQal3cObUag" class="social-btn" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="http://instagram.com/franciscoelhombreband" class="social-btn" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://plus.google.com/franciscoelhombreband" class="social-btn" target="_blank"><i class="fa fa-google-plus"></i></a></li>
               </ul>
             </div>
           </div>
@@ -267,7 +320,24 @@
         var w = video.width();
         video.css({ height: (w * (480/853)) + 'px' });
       });
+
+      // Language Switch
+      $('.lang-btn').click(function(){
+        $this = $(this);
+        $(document.body)[0].className = $this.attr('href').replace('#','');
+        $this.blur();
+      });
     });
+    </script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58651609-1', 'auto');
+    ga('send', 'pageview');
+
     </script>
   </body>
 </html>
