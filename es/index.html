@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,37 +36,24 @@
     <!-- // facebook tags -->
 
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/flexslider.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/queries.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="/css/flexslider.css" rel="stylesheet" >
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/queries.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
     <script>
-      function getLang() {
-        var lang = location.hash.match(/lang\-\w\w/);
-
-        if('lang-es' == lang)
-          return 'es';
-
-        if('savefrancisco.com' == location.hostname)
-          return 'en';
-
-        return 'pt';
-      }
+      var lang = 'es';
     </script>
   </head>
-  <body id="top" class="lang-pt">
-    <script>
-      document.body.className = 'lang-' + getLang();
-    </script>
+  <body id="top" class="lang-es">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -78,9 +65,9 @@
     <header id="home">
       <div class="langs">
         <ul class="social-buttons">
-          <li><a href="#lang-pt" class="social-btn lang-btn pt-btn"><img src="img/flags/brazil.png"></a></li>
-          <li><a href="#lang-es" class="social-btn lang-btn es-btn"><img src="img/flags/mexico.png"></a></li>
-          <li><a href="#lang-en" class="social-btn lang-btn en-btn"><img src="img/flags/us.png"></a></li>
+          <li><a href="#lang-pt" class="social-btn lang-btn pt-btn"><img src="/img/flags/brazil.png"></a></li>
+          <li><a href="#lang-es" class="social-btn lang-btn es-btn"><img src="/img/flags/mexico.png"></a></li>
+          <li><a href="#lang-en" class="social-btn lang-btn en-btn"><img src="/img/flags/us.png"></a></li>
         </ul>
       </div>
       <section class="hero" id="hero">
@@ -218,7 +205,7 @@
           <div class="col-md-4">
             <div class="light-box box-hover">
               <h2><i class="fa fa-paypal"></i><span>Via PayPal</span></h2>
-              <img src="img/cc.gif">
+              <img src="/img/cc.gif">
               <br><br>
               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -282,7 +269,6 @@
                 </div>
                 <script type="text/javascript">
                 var a2a_config = a2a_config || {};
-                var lang = getLang();
                 switch(lang) {
                   case 'pt' :
                     a2a_config.linkname = "Ajude a salvar Francisco, el Hombre #SalveFrancisco";
@@ -434,7 +420,7 @@
               <span class="es">Desenvuelto por</span>
               <span class="en">Developed by</span>
               <a href="http://saulovallory.com/">Saulo Vallory</a>
-              <a href="http://saulovallory.com/"><img class="avatar" src="img/saulo.jpg"></a>
+              <a href="http://saulovallory.com/"><img class="avatar" src="/img/saulo.jpg"></a>
             </p>
           </div>
           <div class="col-md-4 credit">
@@ -443,7 +429,7 @@
               <span class="es">Diseñado por</span>
               <span class="en">Designed by</span>
               <a href="http://www.peterfinlan.com/">Peter Finlan</a>
-              <a href="http://www.peterfinlan.com/"><img class="avatar" src="img/pete.jpg"></a>
+              <a href="http://www.peterfinlan.com/"><img class="avatar" src="/img/pete.jpg"></a>
             </p>
           </div>
           </div>
@@ -453,11 +439,11 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/modernizr.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/jquery.flexslider.js"></script>
+    <script src="/js/modernizr.js"></script>
     <script>
     $(function(){
       var video = $('.full-video');
