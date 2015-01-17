@@ -8,7 +8,6 @@
     <title>Ajude a salvar Francisco, el Hombre!</title>
     <meta name="description" content="A banda Francisco, el Hombre foi assaltada à mão armada. Todos os integrantes estão bem, mas a banda perdeu tudo que tinha e agora precisa da sua ajuda!" />
 
-
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Ajude a salvar Francisco, el Hombre!">
     <meta itemprop="description" content="Na noite do dia 14 de janeiro, quando chegávamos na cidade de Mendoza - Argentina, para descansar depois de 12 horas viagem, fomos assaltados à mão armada. Por muita sorte estamos todos bem, mas perdemos tudo que nos pertencia. Agora precisamos da sua ajuda!">
@@ -91,6 +90,12 @@
       margin: 1em;
     }
 
+    .donation-btn {
+      border-radius: 6px;
+      padding: 10px 16px;
+      background-color: rgb(255, 169, 38);
+      border: 0;
+    }
     .full-video {
       width: 100%;
     }
@@ -240,12 +245,30 @@
       text-align: right;
       padding-right: 30px;
     }
+
+    .share .a2a_kit a {
+      display: inline-block;
+      float: none;
+      margin: auto;
+    }
     </style>
+    <script>
+      function getLang() {
+        var lang = location.hash.match(/lang\-\w\w/);
+
+        if('lang-es' == lang)
+          return 'es';
+
+        if('savefrancisco.com' == location.hostname)
+          return 'en';
+
+        return 'pt';
+      }
+    </script>
   </head>
   <body id="top" class="lang-pt">
     <script>
-      var lang = location.hash.match(/lang\-\w\w/)
-      if(lang) document.body.className = lang[0];
+      document.body.className = 'lang-' + getLang();
     </script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -385,15 +408,37 @@
                 CPF is the national identification document<br>
                 for Brazilian citizens.
               </small>
+              <p class="notes">
+                <span class="pt">
+                  Envie um email para <strong>francisco@salvefrancisco.com</strong>
+                  com o comprovante do depósito e o endereço para envio do CD
+                </span>
+                <span class="es"></span>
+
+              </p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="light-box box-hover">
               <h2><i class="fa fa-paypal"></i><span>Via PayPal</span></h2>
+              <img src="img/cc.gif">
+              <br><br>
               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="WHPXNZDEHFP9J">
-                <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+                <input type="hidden" name="hosted_button_id" value="TT83A7JWK2HRS">
+                <input type="submit" value="Doe R$ 20 e ganhe 1 CD" class="pt donation-btn" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+              <small class="pt">O frete é por sua conta</small>
+              <small class="es">El transporte no está incluido</small>
+              <small class="en">Shipping not included</small>
+              <br><br>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="DT4JDT442AWQQ">
+                <input type="submit" value="Doe o quanto quiser!" class="pt donation-btn" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <input type="submit" value="Done lo que quieras!" class="es donation-btn" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <input type="submit" value="Donate any amount!" class="en donation-btn" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
               </form>
             </div>
@@ -416,6 +461,51 @@
                 inviting us for lunch... Send an email to
               </p>
               <p><a href="mailto:francisco@salvefrancisco.com">francisco@salvefrancisco.com</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="share intro text-center section-padding">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="pt">Ajude divulgando a campanha</h1>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                  <a class="a2a_button_facebook"></a>
+                  <a class="a2a_button_twitter"></a>
+                  <a class="a2a_button_google_plus"></a>
+                  <a class="a2a_button_flipboard"></a>
+                  <a class="a2a_button_whatsapp"></a>
+                  <a class="a2a_button_tumblr"></a>
+                  <a class="a2a_button_wordpress"></a>
+                </div>
+                <script type="text/javascript">
+                var a2a_config = a2a_config || {};
+                var lang = getLang();
+                switch(lang) {
+                  case 'pt' :
+                    console.log('pt')
+                    a2a_config.linkname = "Ajude a salvar Francisco, el Hombre #SalveFrancisco";
+                    a2a_config.linkurl = "http://salvefrancisco.com/";
+                    a2a_config.locale = "pt";
+                    break;
+                  case 'es' :
+                    console.log('EEESSSS')
+                    a2a_config.linkname = "Ayude a salvar Francisco, el Hombre #SalveFrancisco";
+                    a2a_config.linkurl = "http://salvefrancisco.com/";
+                    a2a_config.locale = "es";
+                    break;
+                  case 'en' :
+                    console.log('ENNN')
+                    a2a_config.linkname = "Help saving Francisco, el Hombre #SaveFrancisco";
+                    a2a_config.linkurl = "http://savefrancisco.com/";
+                }
+                </script>
+                <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+              </div>
             </div>
           </div>
         </div>
