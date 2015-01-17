@@ -121,6 +121,10 @@
     .langs {
       float: right;
       margin: 25px 25px 0 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
     }
 
     .langs .social-btn {
@@ -293,19 +297,31 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="arrow">Quer ajudar?<br><small>Faça uma doação</small></h1>
+            <h1 class="arrow pt">Quer ajudar?<br><small>Faça uma doação!</small></h1>
+            <h1 class="arrow es">¿Quieres ayudar?<br><small>Haz una donación!</small></h1>
+            <h1 class="arrow en">Wanna help?<br><small>Make a donation!</small></h1>
           </div>
         </div>
         <div class="row contact-details">
           <div class="col-md-4">
             <div class="light-box box-hover">
-              <h2><i class="fa fa-bank"></i><span>Itaú</span></h2>
+              <h2 class="pt"><i class="fa fa-bank"></i><span>Banco Itaú</span></h2>
+              <h2 class="es"><i class="fa fa-bank"></i><span>Banco Itaú</span></h2>
+              <h2 class="en"><i class="fa fa-bank"></i><span>Itaú Bank</span></h2>
               <p>
                 <strong>Francisco J Piraces Schmidt</strong><br>
-                <strong>Agência</strong> 3814<br>
-                <strong>Conta corrente</strong> 31278-5<br>
+                <strong class="pt">Agência</strong><strong class="es">Agencia</strong><strong class="en">Branch</strong> 3814<br>
+                <strong class="pt">Conta corrente</strong><strong class="es">Cuenta Corriente</strong><strong class="en">Acc Number</strong> 31278-5<br>
                 <strong>CPF</strong> 213.342.138-60
               </p>
+              <small class="es">
+                El CPF es un documento de identificación<br>
+                nacional de ciudadanos brasileros.
+              </small>
+              <small class="en">
+                CPF is the national identification document<br>
+                for Brazilian citizens.
+              </small>
             </div>
           </div>
           <div class="col-md-4">
@@ -321,12 +337,22 @@
           </div>
           <div class="col-md-4">
             <div class="light-box box-hover">
-              <h2><i class="fa fa-paper-plane"></i><span>Outras Doações</span></h2>
-              <p>
+              <h2 class="pt"><i class="fa fa-paper-plane"></i><span>Outras Doações</span></h2>
+              <h2 class="es"><i class="fa fa-paper-plane"></i><span>Otras Donaciones</span></h2>
+              <h2 class="en"><i class="fa fa-paper-plane"></i><span>Other Donations</span></h2>
+              <p class="pt">
                 Se você quer ajudar de outra forma, hospedando, dando passagens ou chamando
                 pra um almoço, envie um email para
               </p>
-              <p><a href="mailto:franciscoelhombre@gmail.com">franciscoelhombre@gmail.com</a></p>
+              <p class="es">
+                Se quieres ayudar de otra manera, hospedando, dando pasajes o
+                llamandolos para un almuerzo, mande un email para
+              </p>
+              <p class="en">
+                If you wanna help in any other way, hosting, giving flight tickets or
+                inviting us for lunch, send an email to
+              </p>
+              <p><a href="mailto:francisco@salvefrancisco.com">francisco@salvefrancisco.com</a></p>
             </div>
           </div>
         </div>
@@ -335,16 +361,23 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Quer conhecer melhor a gente?</h1>
+              <h1 class="pt">Quer conhecer melhor a gente?</h1>
+              <h1 class="es">¿Quieres conocernos mejor?</h1>
+              <h1 class="en">Wanna get to know us better?</h1>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <h2>Ouça o nosso som!</h2>
+              <h2 class="pt">Ouça o nosso som</h2>
+              <h2 class="es">Escuche nuestro ruído</h2>
+              <h2 class="en">Listen to our music</h2>
+
               <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/51051888&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
             </div>
             <div class="col-md-6">
-              <h2>E converse com a gente</h2>
+              <h2 class="pt">E converse com a gente!</h2>
+              <h2 class="es">Y platique con nosotros!</h2>
+              <h2 class="en">And talk to us!</h2>
               <div class="chat">
                 <div class="fb-comments" data-href="http://salvefrancisco.com" data-width="525" data-numposts="5" data-colorscheme="light"></div>
               </div>
@@ -356,7 +389,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1 class="arrow">Ou siga / curta / assista Francisco em outras redes</h1>
+              <h1 class="arrow pt">Ou siga / curta / assista Francisco em outras redes</h1>
+              <h1 class="arrow es">O sigue / gusta / ve Francisco en otras redes</h1>
+              <h1 class="arrow en">Or follow / like / watch Francisco</h1>
               <br>
               <ul class="social-buttons">
                 <li><a href="http://www.facebook.com/franciscoelhombreband" class="social-btn" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -387,7 +422,7 @@
               </div>
               <div class="field-lang">
                 <span class="pt field-header">Idioma</span>
-                <span class="es field-header">Lengua</span>
+                <span class="es field-header">Idioma</span>
                 <span class="en field-header">Language</span>
                 <ul>
                   <li>
@@ -426,13 +461,19 @@
           </div>
           <div class="col-md-3 credit">
             <p>
-              Developed by <a href="http://saulovallory.com/">Saulo Vallory</a>
+              <span class="pt">Desenvolvido por</span>
+              <span class="es">Desenvuelto por</span>
+              <span class="en">Developed by</span>
+              <a href="http://saulovallory.com/">Saulo Vallory</a>
               <a href="http://saulovallory.com/"><img class="avatar" src="img/saulo.jpg"></a>
             </p>
           </div>
           <div class="col-md-3 credit">
             <p>
-              Designed by <a href="http://www.peterfinlan.com/">Peter Finlan</a>
+              <span class="pt">Design por</span>
+              <span class="es">Diseñado por</span>
+              <span class="en">Designed by</span>
+              <a href="http://www.peterfinlan.com/">Peter Finlan</a>
               <a href="http://www.peterfinlan.com/"><img class="avatar" src="img/pete.jpg"></a>
             </p>
           </div>
